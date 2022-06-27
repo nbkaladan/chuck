@@ -1,0 +1,75 @@
+{
+  "name": "chuck-facts",
+  "version": "1.0.0",
+  "description": "Frontend for Chuck Norris Facts",
+  "scripts": {
+    "start": "webpack serve --devtool inline-source-map --mode=development",
+    "build": "webpack --mode=production",
+    "test": "karma start --browsers ChromeCustom",
+    "update": "npm update"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "author": "Javi",
+  "dependencies": {
+    "bootstrap": "^5.1",
+    "bootstrap-icons": "^1",
+    "jquery": "^3",
+    "@popperjs/core": "^2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7",
+    "@babel/core": "^7",
+    "@babel/eslint-parser": "^7",
+    "@babel/node": "^7",
+    "@babel/plugin-proposal-class-properties": "^7",
+    "@babel/plugin-proposal-json-strings": "^7",
+    "@babel/plugin-syntax-import-meta": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-typescript": "^7",
+    "@babel/register": "^7",
+    "babel-loader": "^8",
+    "babel-plugin-dynamic-import-webpack": "^1",
+    "babel-plugin-module-resolver": "^3",
+    "clean-webpack-plugin": "^3",
+    "copy-webpack-plugin": "^8",
+    "css-loader": "^5",
+    "eslint": "^7",
+    "eslint-plugin-jasmine": "^4",
+    "eslint-webpack-plugin": "^2",
+    "exports-loader": "^4",
+    "html-loader": "^2",
+    "html-webpack-plugin": "^5",
+    "is-docker": "^2",
+    "jasmine-core": "^4",
+    "karma": "^6",
+    "karma-chrome-launcher": "^3",
+    "karma-coverage": "^2",
+    "karma-jasmine": "^4",
+    "karma-sourcemap-loader": "^0",
+    "karma-webpack": "^5",
+    "less": "^4.1.2",
+    "less-loader": "^9",
+    "mini-css-extract-plugin": "^1",
+    "npm-check-updates": "^14",
+    "style-loader": "^2",
+    "terser-webpack-plugin": "^5",
+    "webpack": "^5",
+    "webpack-cli": "^4",
+    "webpack-dev-server": "^4"
+  },
+  "keywords": [
+    "webpack",
+    "bootstrap"
+  ],
+  "size-limit": [
+    {
+      "limit": "300 KB",
+      "webpack": false,
+      "path": "dist/*.js"
+    }
+  ]
+}

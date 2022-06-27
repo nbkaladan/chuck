@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Estos son los resultados de tu búsqueda de Hechos de Chuck Norris</h1>
+    <p>
+        Como parámetro de búsqueda, pusiste: <%= @fact_search.search_by %>
+        <% if @fact_search.search_by != 'random' %>
+        <br>
+        Además, indicaste que querías: <%= @fact_search.parameters %>
+        <% end %>
+    </p>
+
+    <p>
+      Obtuviste como respuesta: <br>
+      <%= @fact_search.response %>
+    </p>
+  </body>
+</html>

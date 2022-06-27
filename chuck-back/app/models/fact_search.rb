@@ -1,0 +1,2 @@
+class FactSearch < ApplicationRecord
+end
