@@ -25,4 +25,29 @@ En `chuck-back/app/controllers` encontraréis un directorio por cada módulo. Ta
 Cada módulo dentro de `services` sigue la misma estructura de directorios: 
 - `application`: Aquí encontraremos los casos de uso. Cada uno en un subdirectorio distinto.
 - `domain`: Modelos de dominio, excepciones.
-- `infrastructure`
+- `infrastructure`: Conexiones hacia el exterior: Base de datos, http, envío de correo...
+
+El flujo normal de una llamada a uno de los endpoints sería: 
+- El controller recibe la petición e invoca a la clase que resuelve el caso de uso.
+- Para construir el caso de uso tenemos un factory que inyectará las dependencias necesarias. De esta manera si queremos, por ejemplo, cambiar la implementación del repositorio de categorias para que tire de bbdd solo debemos hacer que el factory lo instancie y lo inyecte.
+- El caso de uso utilizará los elementos que considere necesarios para realizar su labor (repositorio (bbdd, http...), notificador (email, mensajería...)) y devuelve la respuesta al controller.
+- Tras cada búsqueda se dispara una notificación asíncrona que recibe el listener encargado de almacenarla en bbdd.
+
+Los endpoints disponibles son:
+- '/v1/categories' => Listado de categorías
+- '/v1/facts/random' => Fact aleatorio
+- '/v1/facts/by_category/:category' => Fact por categoría
+- '/v1/facts?keyword=' => Buscador de facts por palabras
+- '/v1/facts/:id/notify' => Enviar una búsqueda al correo
+
+He creado un test de cada tipo a modo de ejemplo: Unitario, infraestructura e integración. Estarían disponibles en:
+- `chuck-back/controller/categories`
+- `chuck-back/services/categories/application`
+- `chuck-back/services/categories/infrastructure`
+
+## Sobre el front
+
+Como decía, únicamente he utilizado vanilla js y bootstrap 5. Sin frameworks adicionales.
+En el fichero package.json podemos encontrar las dependencias declaradas así como las tareas npm que se pueden ejecutar.
+
+Toda la aplicación cuelga de app.js. Desde ahí se incluyen y construyen el resto de los componentes que necesita para funcionar.

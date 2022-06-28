@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/nbkaladan/chuck"
   },
-  "homepage": "",
+  "homepage": "https://github.com/nbkaladan/chuck",
   "author": "Javi",
   "dependencies": {
     "bootstrap": "^5.1",
