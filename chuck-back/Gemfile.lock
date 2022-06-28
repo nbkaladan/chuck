@@ -96,6 +96,8 @@ GEM
     digest (3.1.0)
     e2mmap (0.1.0)
     erubi (1.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     faraday (2.3.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
@@ -274,6 +276,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debase
+  faker
   faraday
   importmap-rails
   jbuilder
