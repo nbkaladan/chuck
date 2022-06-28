@@ -35,11 +35,11 @@ El flujo normal de una llamada a uno de los endpoints sería:
 - Tras cada búsqueda se dispara una notificación asíncrona que recibe el listener encargado de almacenarla en bbdd.
 
 Los endpoints disponibles son:
-- '/api//v1/categories' => Listado de categorías
-- '/api//v1/facts/random' => Fact aleatorio
-- '/api//v1/facts/by_category/:category' => Fact por categoría
-- '/api//v1/facts?keyword=' => Buscador de facts por palabras
-- '/api//v1/facts/:id/notify' => Enviar una búsqueda al correo
+- '/api/v1/categories' => Listado de categorías
+- '/api/v1/facts/random' => Fact aleatorio
+- '/api/v1/facts/by_category/:category' => Fact por categoría
+- '/api/v1/facts?keyword=' => Buscador de facts por palabras
+- '/api/v1/facts/:id/notify' => Enviar una búsqueda al correo
 
 He creado un test de cada tipo a modo de ejemplo: Unitario, infraestructura e integración. Estarían disponibles en:
 - `chuck-back/controller/categories`
