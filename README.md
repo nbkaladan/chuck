@@ -11,6 +11,7 @@ Para ejecutar la aplicación encontraremos, en el raiz, un fichero docker-compos
 
 Tras ello podremos navegar hacia `0.0.0.0` para encontrar la aplicación. Alternativamente, podremos acceder a través de `chuck-facts.local` si lo añadimos a nuestro fichero de hosts.
 
+En el directorio screenshots se pueden encontrar las capturas de pantalla de la aplicación en ejecución.
 
 
 ## Sobre el back
