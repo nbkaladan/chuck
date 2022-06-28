@@ -72,7 +72,8 @@ const webpackConfig = (env, argv) => {
       new ESLintPlugin(),
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: path.resolve("./src/index.html")
+        template: path.resolve("./src/index.html"),
+        favicon: path.resolve("./src/assets/chuck.ico")
       }),
 
       new webpack.optimize.SplitChunksPlugin({
